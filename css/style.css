@@ -1,0 +1,30 @@
+
+
+        #forward {
+        float: right;
+        }
+
+        #reverse {
+        float: left;
+        }
+    
+        #map {
+        height: 700px;
+        width: 1000%;
+        display: inline-block;
+        }
+
+    .sequence-control-container {
+        width: 350px;
+        height: 30px;
+        background-color: rgba(255,255,255,0.8);
+        padding: 10px;
+        line-height: 45px;
+        text-align: center;
+        border: solid black 2px;
+    }
+
+    .range-slider {
+        width: 200px;
+    }
+}
