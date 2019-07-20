@@ -10,54 +10,137 @@
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	</head>
     
-<body style="padding-top: 70px">
+<body style="padding-top: 50px">
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	
 	
+	
 <!the navbar>
 		
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-	  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Dark Terrian Mapbox and Leaflet GIS Lab</a>
+	  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Dark Terrian Mapbox/Leaflet/WebGIS Lab</a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 	    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 	      <ul class="navbar-nav mr-auto">
-	        <li class="nav-item active"> <a class="nav-link" href="#">Top <span class="sr-only">(current)</span></a> </li>
-	        <li class="nav-item"> <a class="nav-link" href="https://sounny.github.io/">About</a> </li>
+			  <li class="nav-item active"> <a class="nav-link" href="#">start<span class="sr-only">(current)</span></a> </li>
+			  <li class="nav-item"> <a class="nav-link" href="#C0">0-objective</a> </li>
+			  <li class="nav-item"> <a class="nav-link" href="#C1">1-mapbox</a> </li>
+			  <li class="nav-item"> <a class="nav-link" href="#C2">2-leaflet</a> </li>
+			  <li class="nav-item"> <a class="nav-link" href="#C3">3-github</a> </li>
+			  <li class="nav-item active"> <a class="nav-link" href="#C4">done!<span class="sr-only">(current)</span></a> </li>
+			  <li class="nav-item"> <a class="nav-link" href="https://sounny.github.io/">About</a> </li>
           </ul>
 	      </div>
 	    </nav>
 </nav>
 	
 
-	<!the map>
+<!--the map-->
 <div id="map" style="width: 100%; height: 700px;"></div>
 <script src ="lib/leaflet-src.js"> </script>
-        <!--<script src = "css/style.css"> </script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src = "js/main.js"></script>
-      
 
-  <div>
-	<h1>Dark Terrian Mapbox and Leaflet GIS Lab</h1>
-	<p>In this lab, you will make something similar to the map above. We will use web mapping technologies Mapbox and Leaflet. Mapbox is provider of custom online maps for websites and applications such as Foursquare, Lonely Planet, Facebook, the Financial Times, The Weather Channel and Snapchat. Leaflet is a widely-used open-source JavaScript library used to build web mapping applications. </p>
+	<div style="padding: 25px 25px 25px 300px;">
+		<br id="C0" style="padding-top: 50px;">
+		<h1>Objective</h1>
+		<p>In this lab, you will make something similar to the map above. We will use web mapping technologies, Mapbox, Leaflet, and GitHub.  Mapbox is a provider of custom online maps for websites and applications such as Foursquare, Facebook, and The Weather Channel. Leaflet is a widely-used open-source JavaScript library used to build web mapping applications. GitHub provides hosting for software development version control using Git.  What is nice about these technologies is that they are highly customizable and can give you a platform to develop online webmaps. </p>
+		<br>
+		
+<!--mapbox section-->
+		<br id="C1" style="padding-bottom: 50px;">		
+		<h1>Making a style on <img src="img/Mapbox_logo_2019.svg" alt="Mapbox Logo" style="width:275px;height:62px;" /></h1>
+		<ol>
+			<li>Go to Mapbox website - <a href="https://www.mapbox.com/">https://www.mapbox.com/</a></li>
+			<li>Sign up for a new account.  If you can't find a link here you go - <a href="https://account.mapbox.com/auth/signup/">Sign Up Here!</a></li>
+			<li>Choose the 'Pay as you Go' plan.  This will give you the free tier and plenty of loads to learn how to use MapBox.</li>
+			<li>Once you are signed up and logged in, go to the MapBox Studio to start design your own custom basemap. <a href ="https://studio.mapbox.com/">https://studio.mapbox.com/</a></li>
+			<li>In the studio prompt click on 'new style' </li>
+			<li><img src="img/ss1.png" width="552" height="218" alt="Screenshot showing MapBox Studio with the New Style Button"/></li>
+			<li>Choose a template, I choose 'Dark' for this lab, but spice it up select whichever one you want. </li>
+			<li>Once you select the base template, you want to start with click on 'customize template' to get into MapBox Studio</li>
+			<li>This part you need to experiment with and have fun. As you can see from the Table of Contents, that each layer is there and you can click on them to open a panel customize them.  You can change fonts, colors, line weights, etc. If you click on a title of the layer, you can drag them to rearrange drawing order. You can also select a layer and delete them. As for me, I am going to add a layer to the mix, the terrain layer, and mix it in with the default dark template to make 'Dark Terrian'.</li>
+			<li>To add a new layer click the 'add layer' button</li>
+			<li>A panel will popup. I am going to choose to add Terrian (RBG encoded DEM)</li>
+			<li>This will add the layer to the top of the table of contents.</li>
+			<li>Drag the layer down in the drawing order so the roads and labels will draw over it. Be sure to click out of the panel to see the result.</li>
+			<li>Once you are done modifying your Mapbox Style, it is time to publish it.  Click the Publish button to put it on the production server and have it ready for your use.</li>
+			<li>You should get a prompt saying you have succesfully published your style.</li>
+			<li>Now click the share button.  This will give you two essential pieces of information that you will use afterwards during coding, Your Style URL and access token. For now, keep access to this information on hand.</li>
+		</ol>
+		<br>
+		
+<!--github section-->
+		<br id="C2" style="padding-bottom: 50px;">		
+		<h1 >Start Developing with <img src="img/Leaflet_logo.svg" alt="Leaflet Logo" style="width:239px;height:62px;"/></h1>
+		<ol>
+			<li>For the web development part of this lab, I am going to work in Brackets.  Brackets is a source code editor with a primary focus on web development. Created by Adobe Systems, it is free and open-source software.  You can use any development platform or text editor to do this lab.  If you are interested in downloading and installing Brackets, go to this site - <a href="http://brackets.io/">http://brackets.io/</a></li>
+			<li>To start developing, you will need to make a local folder to work in.  This folder can be located anywhere on your computer.  I named my folder DarkTerrain. </li>
+			<li>Under that folder make two more folders, one called 'lib' and the other 'js' . The lib folder will be your library folder where you will put files that you will refer to run your site.  The js folder is where you will put your javascript files that you will develop in. </li>
+			<li>In the lib folder, you will need to add the Leaflet libraries and stylesheets. Got to <a href="https://leafletjs.com/download.html">https://leafletjs.com/download.html</a> and download the latest stable version. Extract the contents of the folder into your lib folder. </li>
+			<li>Now you are ready to start up brackets.  Open brackets and then choose File>Open Folder . Navigate to your Project folder.  Remember I named mine DarkTerrian.  When you open the folder you will see the sidebar now has your folders name and the js and lib folders. </li>
+			<li><img src="img/ss2.png" width="500" height="176" alt="Screenshot of the brackets"/></li>
+			<li>You will need to make two files to develop, the index.html file and the main.js.  Let's start with the html.  Click on File>New.  This will make a new page where you can start coding. </li>
+			<li>Now you will add in boilerplate code, this is just that basic structure of html.  You will modify and add code to this to make your map.</li>
+			<li><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:750px;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #557799">&lt;!DOCTYPE html&gt;</span>
+<span style="color: #007700">&lt;html</span> <span style="color: #0000CC">lang=</span><span style="background-color: #fff0f0">&quot;en&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;head&gt;</span>
+        <span style="color: #007700">&lt;meta</span> <span style="color: #0000CC">charset=</span><span style="background-color: #fff0f0">&quot;utf-8&quot;</span><span style="color: #007700">&gt;</span>
+        <span style="color: #007700">&lt;meta</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">&quot;viewport&quot;</span> <span style="color: #0000CC">content=</span><span style="background-color: #fff0f0">&quot;width=device-width&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;title&gt;&lt;/title&gt;</span>
 
-	<img src="img/Mapbox_logo_2019.svg" alt="Mapbox Logo" style="width:300px;height:68px;" />
+        <span style="color: #888888">&lt;!--put your external stylesheet links here--&gt;</span>
+        
+       
+    <span style="color: #007700">&lt;/head&gt;</span>
 
-	  <h2>Setting up your MapBox Style</h2>
-	 <h3>Step 1 - Get a MapBox Account</h3>
-	  <ol>
-		<li>Got to Mapbox website - <a href="https://www.mapbox.com/">https://www.mapbox.com/</a></li>
-		  <li></li>
-	  </ol>
+    <span style="color: #007700">&lt;body&gt;</span>
+        <span style="color: #888888">&lt;!--put your initial page content here--&gt;</span>
 
-	  <br></br>
-	<img src="img/Leaflet_logo.svg" alt="Leaflet Logo" style="width:303px;height:80px;"/>
-	  <h2>Making you Leaflet site</h2>
 
-  </div>
+        <span style="color: #888888">&lt;!--put your external script links here--&gt;</span>
+        
+    <span style="color: #007700">&lt;/body&gt;</span>
+<span style="color: #007700">&lt;/html&gt;</span>
+</pre></td></tr></table></div>
+</li>
+			
+		</ol>
+		<br>
+ 
+<!--leaflet section-->
+		<br id="C3" style="padding-bottom: 50px;">		
+		<h1 >Make your Map live on <img src="img/GitHub.svg" alt="Github Logo" style="width:211px;height:62px;"/></h1>
+		
+		
+<!--done section-->
+		<br id="C4" style="padding-bottom: 50px;">		
+		<h1>You are done!</h1>
+		
+
+	</div>
 
 </body>
 	
